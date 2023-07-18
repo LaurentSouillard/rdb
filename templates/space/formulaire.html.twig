@@ -1,0 +1,18 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Ajout d'un espace{% endblock %}
+
+{% block content %}
+
+ <div class="container-fluid bg-dark p-3">
+        
+    <div class="heading">
+        <h1 class="d-flex justify-content-center fw-bold">Formulaire pour ajouter un espace</h1>
+    </div>
+
+    <div class="col-md-10 m-5">
+        {{ form(formSpace) }}
+    </div>
+</div>
+
+{% endblock %}

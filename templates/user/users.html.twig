@@ -1,0 +1,32 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+<div class="container-fluid bg-dark p-3">
+        
+    <div class="heading">
+        <h1 class="d-flex justify-content-center fw-bold">Les Utilisateurs</h1>
+    </div>
+    
+     <div class="col-md-10 m-5">
+
+        <table class="table text-center text-light">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Email</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td>{{ user.nom }}</td>
+                        <td>{{ user.email }}</td>
+                    </tr>
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+    </div>
+{% endblock %}

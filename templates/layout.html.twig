@@ -1,0 +1,107 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+    <body data-spy="scroll" data-target=".navbar" data-offset="60">
+          <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <a class="navbar-brand" href="#myNavbar"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="myNavbar">
+              <ul class="nav nav-pills navbar-nav">
+                <li><a href="{{ path('app_home') }}"><i class="fa fa-lg fa-home"></i></a></li>
+                <li><a href="{{ path('app_about') }}">QUI SOMMES-NOUS ?</a></li>
+                <li><a href="{{ path('app_space') }}">NOS ESPACES</a></li>
+                <li><a href="{{ path('app_services') }}">NOS SERVICES</a></li>
+                {% if not is_granted("IS_AUTHENTICATED_FULLY") %}
+                  <li><a href="{{ path('app_login') }}">CONNEXION</a></li>
+                  <li><a href="{{ path('app_register') }}">INSCRIPTION</a></li>
+                {% else %}
+                  <li><a href="{{ path('app_reservation') }}">RÉSERVATION</a></li>
+                  <li><a href="{{ path('app_logout') }}">DÉCONNEXION</a></li>
+                {% endif %}
+
+                {% if is_granted('IS_AUTHENTICATED_FULLY') and is_granted('ROLE_ADMIN') %}
+                    <div class="dropdown">
+                        <button class="btn btn-dark text-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            ADMIN
+                        </button>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item text-primary" href="{{ path('app_space_ajout') }}">Ajout d'un espace</a></li>
+                            <li><a class="dropdown-item text-primary" href="{{ path('app_reservations') }}">Réservations</a></li>
+                            <li><a class="dropdown-item text-primary" href="{{ path('app_users') }}">Utilisateurs</a></li>
+                        </ul>
+                    </div>
+                {% endif %}
+
+                {% if is_granted('IS_AUTHENTICATED_FULLY') and is_granted('ROLE_USER') %}
+                    <div class="dropdown">
+                        <button class="btn btn-dark text-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            MEMBRE
+                        </button>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item text-primary" href="{{ path('app_user') }}">Mon compte</a></li>
+                        </ul>
+                    </div>
+                {% endif %}
+
+              </ul>
+            </div>
+          </nav>
+
+    <main>
+
+        {% for message in app.flashes('erreur') %}
+            <div class="alert alert-danger text-center p-1">
+                <p class="text-dark"> {{ message }}</p>
+            </div>
+        {% endfor %}
+
+        {% for message in app.flashes('warning') %}
+            <div class="alert alert-warning text-center p-1">
+                <p class="text-dark"> {{ message }}</p>
+            </div>
+        {% endfor %}
+
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success text-center p-1">
+                <p class="text-dark"> {{ message }}</p>
+            </div>
+        {% endfor %}
+    
+        {% block content %}
+        {# ce block restera vide dans le layout, c'est là ou viendra s'inserer le contenu propre à chaque page #}
+        {% endblock %}
+    
+    </main>
+
+    <div id="footer">
+        <footer> 
+            <h3 class="text-center display-4">Rue du Boulot Espace et Bureau de Travail en Coworking à Paris</h3>
+            <ul class="d-flex justify-content-center">
+                <li><a class="faicon-facebook" href="#"><i id="fa" class="fa-4x fab fa-facebook"></i></a></li>
+                <li><a class="faicon-twitter" href="#"><i id="fa" class="fa-4x fab fa-twitter"></i></a></li>
+                <li><a class="faicon-linkedin" href="#"><i id="fa" class="fa-4x fab fa-linkedin"></i></a></li>
+                <li><a class="faicon-instagram" href="#"><i id="fa" class="fa-4x fab fa-instagram"></i></a></li>
+            </ul>
+
+            <nav class="d-flex justify-content-center p-2">
+                <ul class="p-1 m-3">
+                    <li><a href="{{ path('app_home') }}"><i class="fa fa-lg fa-home"></i></a></li>
+                    <li><a href="{{ path('app_about') }}">QUI SOMMES-NOUS ?</a></li>
+                    <li><a href="{{ path('app_contact') }}">CONTACT</a></li>
+                    <li><a href="{{ path('app_cgu') }}">CGU</a></li>
+                </ul>
+            </nav>
+
+            <div id="copyright" class="d-flex justify-content-center mt-0"> 
+                <p class="fl_left fs-5 ms-2">&copy; 2022 - Tous droits réservés - <a href="https://laurentsouillard.com/" target="_blank">Laurent Souillard</a></p>
+                <a id="backtotop" href="#top"><i class="fa fa-2x fa-chevron-up me-3"></i></a>
+            </div>
+        </footer>
+    </div>
+
+{% endblock %}

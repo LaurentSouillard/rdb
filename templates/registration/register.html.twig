@@ -1,0 +1,43 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Inscription chez Rue du Boulot Coworking à Paris{% endblock %}
+
+{% block content %}
+    <section id="register">
+        <div class="heading">
+            <h1>Inscription</h1>
+        </div>
+
+    <div class="row">
+        <div class="image col-md-6">
+            <img src="images/front3.jpg" alt="salle de réunion pour groupe de travail">
+        </div>
+        <div class="col-md-6 d-flex align-items-center text-center mb-5">
+                {{ form_start(registrationForm) }}
+                <div class="input-group justify-content-center">
+                    {{ form_row(registrationForm.nom) }}
+                </div>
+                <div class="input-group justify-content-center">
+                    {{ form_row(registrationForm.email) }}
+                </div>
+                <div class="input-group justify-content-center">
+                    {{ form_row(registrationForm.plainPassword, {
+                        label: 'Mot de passe'
+                    }) }}
+                </div>
+                <div class="m-5">
+                    {{ form_row(registrationForm.agreeTerms, {
+                        label: 'J\'accepte les conditions générales d\'utilisation en cochant cette case'
+                    }) }}
+                </div>
+                <div class="input-group justify-content-center">
+                    <button type="submit" class="btn">INSCRIPTION</button>
+                </div>
+                <p>
+                    Déjà membre ? <a href="{{ path('app_login') }}">Connexion</a>
+                </p>
+                {{ form_end(registrationForm) }}      
+        </div>
+    </div>
+    </section>
+{% endblock %}

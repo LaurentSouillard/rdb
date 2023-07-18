@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}La Réservation{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid bg-dark p-3">
+        
+    <div class="heading">
+        <h1 class="d-flex justify-content-center fw-bold">La Réservation</h1>
+    </div>
+
+    <div class="row d-flex justify-content-center text-center">
+
+            <div class="card m-1" style="width: 18rem;">
+                
+                <div class="card-body">
+        
+                    <div>
+                        <a href=" {{ path("app_update_uneReservation", {id: reservation.id} ) }}"><i class="fas fa-edit mx-1 text-success"></i></a>
+                        <a href="{{ path('app_delete_uneReservation', {id: reservation.id} ) }}"><i class="fas fa-trash mx-1 text-danger" onclick=" return confirm('Voulez-vous vraiment supprimer la réservation ?')" ></i></a>
+                    </div>
+        
+                    <h5 class="card-title">{{ reservation.user.nom }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Date d'arrivée : {{ reservation.dateArrivee | date("d/m/Y") }}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Date de départ : {{ reservation.dateDepart | date("d/m/Y") }}</h6>
+                    <p class="text-dark fs-6">Nombre de personnes : {{ reservation.nbPersonnes}}</p>
+                
+            
+                </div>
+            </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

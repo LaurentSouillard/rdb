@@ -1,0 +1,444 @@
+
+	/* code couleurs : soie de mais #FFF8DC
+		bleuet : #6495ED
+		violet orchidée : #BA55D3 */ 
+
+
+/* ABOUT */
+
+/* HAUT */
+
+#front1{
+	background-color: #BA55D3;
+	color: #FFF8DC;
+	padding: 4%;
+}
+#front1 h1{
+	color: #6495ED;
+	margin-bottom: 5%;
+	background-color: #FFF8DC;
+	padding: 4%;
+	border-radius: 100px;
+}
+#front1 p{
+	background-color: #6495ED;
+	padding: 4%;
+	border-radius: 100px;
+}
+
+/* MILIEU */
+
+#front2{
+	background-color: #6495ED;
+	padding: 4%;
+	margin-right: 20px;
+}
+#front2 p{
+	color: #BA55D3;
+}
+#front2 span{
+	padding: 4%;
+}
+#front2 ul{
+	padding: 4%;
+	flex-wrap: wrap;
+}
+#front2 ul li{
+	list-style: none;
+	margin: 10px;
+}
+#frLeft, #frMiddle, #frRight{
+	color: #BA55D3;
+	margin-bottom: 5%;
+	background-color: #FFF8DC;
+	padding: 4%;
+	margin: 40px;
+	border-radius: 100px;
+}
+
+/* BAS */
+
+#front3{
+	background-color: #FFF8DC;
+}
+#front3 h2{
+	color: #6495ED;
+	margin-top: 5%;
+	background-color: #BA55D3;
+	border-radius: 100px;
+	padding: 4%;
+	margin: 5%;
+}
+#front3 span{
+	color: #FFF8DC;
+}
+#front3 iframe{
+	margin-bottom: 5%;
+}
+/* FIN ABOUT */
+/* SERVICES */
+
+#services{
+	background-color: #BA55D3;
+	padding: 4%;
+}
+#bandeau1, #bandeau2, #bandeau3, #bandeau4, 
+#bandeau5, #bandeau6, #bandeau7, #bandeau8{
+	border-radius: 100px;
+	padding: 4%;
+	margin: 5%;
+}
+#bandeau1, #bandeau3, #bandeau5, #bandeau7{
+	background-color: #FFF8DC;
+	color: #6495ED;
+}
+#bandeau1 p, #bandeau3 p, #bandeau5 p, #bandeau7 p{
+	color: #6495ED;
+}
+#bandeau2, #bandeau4, #bandeau6, #bandeau8{
+	background-color: #6495ED;
+	color: #FFF8DC;
+}
+/* FIN SERVICES */
+/* SPACES */
+
+#spaces{
+	background-color: #6495ED;
+	padding: 4%;
+}
+#space1{
+	background-color: #BA55D3;
+	padding: 4%;
+	color: #FFF8DC;
+	flex-wrap: wrap;
+}
+#spaces img{
+	border-radius: 100px;
+	padding: 2%;
+}
+#space2{
+	background-color: #FFF8DC;
+	padding: 4%;
+	color: #6495ED;
+	margin-top: 4%;
+	flex-wrap: wrap;
+	justify-content: end;
+}
+#space2 p{
+	color: #6495ED;
+}
+#space2 img{
+	margin-top: 6%;
+}
+#spacesList ul li img{
+	margin: 2%;
+}
+#spacesList ul{
+	flex-wrap: wrap;
+}
+#spacesList ul li{
+	list-style: none;
+}
+#purple{
+	background-color: #BA55D3;
+	padding: 4%;
+	color: #FFF8DC;
+	margin: 2%;
+}
+#white{
+	background-color: #FFF8DC;
+	padding: 4%;
+	color: #6495ED;
+	margin: 2%;
+}
+#white p{
+	color: #6495ED;
+}
+/* FIN SPACES */
+
+/* CGU */
+
+#cgu{
+	background-color: #6495ED;
+	color: #FFF8DC;
+}
+
+/* RESERVATION */
+
+#reservation{
+	background-color: #BA55D3;
+	padding: 1px;
+}
+#reservation .container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.hotel-reservation-form {
+    background-color: #6495ED;
+    width: 75%;
+    margin: 15px auto;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2);
+}
+.hotel-reservation-form .fields {
+    position: relative;
+    padding: 20px;
+}
+.hotel-reservation-form #reservation_espaces {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #c7c9cb 50%), linear-gradient(135deg, #c7c9cb 50%, transparent 50%), linear-gradient(to right, #dfe0e0, #dfe0e0);
+    background-position: calc(100% - 20px) 20px, calc(100% - 15px) 20px, calc(100% - 40px) 10px;
+    background-size: 5px 5px, 5px 5px, 1px 25px;
+    background-repeat: no-repeat;
+}
+.hotel-reservation-form #reservation_espaces option:first-child {
+    display: none;
+ }
+.hotel-reservation-form input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #6495ED;
+    filter: invert(0.8);
+}
+.hotel-reservation-form input[type="text"], 
+.hotel-reservation-form input[type="email"],
+.hotel-reservation-form input[type="date"],
+.hotel-reservation-form input[type="tel"],
+.hotel-reservation-form #reservation_espaces, 
+.hotel-reservation-form #reservation_nbPersonnes,
+.hotel-reservation-form #reservation_telephone {
+    display: flex;
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #BA55D3;
+    width: 100%;
+    flex-basis: 100%;
+    height: 47px;
+}
+.hotel-reservation-form input[type="text"]:focus, 
+.hotel-reservation-form input[type="email"]:focus,
+.hotel-reservation-form input[type="tel"]:focus,
+.hotel-reservation-form input[type="date"]:focus,
+.hotel-reservation-form #reservation_espaces:focus,
+.hotel-reservation-form #reservation_nbPersonnes:focus,
+.hotel-reservation-form #reservation_telephone:focus {
+    border: 1px solid #BA55D3;
+}
+.hotel-reservation-form input[type="text"]::placeholder, 
+.hotel-reservation-form input[type="email"]::placeholder, 
+.hotel-reservation-form input[type="tel"]::placeholder, 
+.hotel-reservation-form input[type="date"]:invalid, 
+.hotel-reservation-form textarea::placeholder,
+.hotel-reservation-form #reservation_espaces:invalid,
+.hotel-reservation-form #reservation_nbPersonnes:invalid,
+.hotel-reservation-form #reservation_telephone:invalid {
+    color: #BA55D3;
+}
+.hotel-reservation-form textarea {
+    resize: none;
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #BA55D3;
+    width: 100%;
+    height: 150px;
+}
+.hotel-reservation-form textarea:focus {
+    border: 1px solid #BA55D3;
+}
+.hotel-reservation-form #reservation_envoyer {
+    display: block;
+    margin-top: 15px;
+    padding: 15px;
+    border: 0;
+    background-color: #BA55D3;
+    font-weight: bold;
+    color: #FFF8DC;
+    cursor: pointer;
+    width: 100%;
+}
+.hotel-reservation-form #reservation_envoyer:hover {
+    background-color: #FFF8DC;
+	color: #BA55D3;
+}
+.hotel-reservation-form input[name="email"] {
+    position: relative;
+    display: block;
+}
+.hotel-reservation-form .field {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    padding-bottom: 20px;
+}
+.hotel-reservation-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFF8DC;
+	padding: 5px;
+}
+.hotel-reservation-form .responses {
+    padding: 15px;
+    margin: 0;
+}
+.hotel-reservation-form .fields .row .gap {
+    width: 35px;
+}
+#contact .container{
+	padding: 1px;
+}
+#contact .img-responsive{
+	background-size: cover;
+	margin: 0;
+	padding: 1px;
+}
+#contact h2, label, span, #contact p{
+	color: #BA55D3;
+	font-weight: bold;
+}
+#contact .button1{
+	border-radius: 10px;
+	width: 250px;
+	height: 50px;
+	margin: 2%;
+	background-color: #6495ED;
+	color: #FFF8DC;
+	text-transform: uppercase;
+}
+#contact .button1:hover{
+	background-color: #BA55D3;
+}
+
+/* INSCRIPTION */
+
+#register{
+	background-color: #6495ED;
+	padding: 1px;
+}
+#register h1{
+	color: #FFF8DC;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 15px;
+}
+#register img{
+	display: flex;
+	justify-content: center;
+	margin: 15px auto;
+	border: 5px solid #BA55D3;
+	border-radius: 30px;
+}
+#register form, .content {
+	width: 75%;
+	margin: 0px auto;
+	padding: 30px;
+	border: 5px solid #BA55D3;
+	background: #FFF8DC;
+	border-radius: 30px;
+}
+#register .input-group {
+	margin: 10px 0px 10px 0px;
+}
+#register .input-group label {
+	display: block;
+	text-align: left;
+	margin: 3px;
+}
+#register .input-group input {
+	height: 30px;
+	width: 93%;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid #BA55D3;
+}
+#register .btn {
+	padding: 10px;
+	font-size: 15px;
+	color: #FFF8DC;
+	background: #6495ED;
+	border: none;
+	border-radius: 5px;
+}
+#register .btn:hover{
+	background-color: #BA55D3;
+}
+#register .error {
+	width: 92%; 
+	margin: 0px auto; 
+	padding: 10px; 
+	border: 1px solid #a94442; 
+	color: #a94442; 
+	background: #f2dede; 
+	border-radius: 5px; 
+	text-align: left;
+}
+#register .success {
+	color: #3c763d; 
+	background: #dff0d8; 
+	border: 1px solid #3c763d;
+	margin-bottom: 20px;
+}
+#register p{
+	color: #6495ED;
+	font-style: italic;
+	font-size: 20px;
+}
+#register a{
+	text-decoration: none;
+	color:#6495ED;
+}
+#register a:hover{
+	color: #BA55D3;
+}
+
+/* CONNEXION */ 
+
+#connexion{
+	background-color: #6495ED;
+	padding: 1px;
+}
+#connexion h1{
+	color: #FFF8DC;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 15px;
+}
+#connexion img{
+	display: flex;
+	justify-content: center;
+	margin: 25px auto;
+	border: 5px solid #BA55D3;
+	border-radius: 30px;
+}
+#connexion form, .content {
+	width: 95%;
+	margin: 50px;
+	padding: 30px;
+	border: 5px solid #BA55D3;
+	background: #FFF8DC;
+	border-radius: 30px;
+}
+#connexion .btn {
+	padding: 10px;
+	font-size: 15px;
+	color: #FFF8DC;
+	background: #6495ED;
+	border: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#connexion .btn:hover{
+	background-color: #BA55D3;
+}
+#connexion a{
+	text-decoration: none;
+	color:#6495ED;
+}
+#connexion a:hover{
+	color: #BA55D3;
+}
+#connexion p{
+	color: #6495ED;
+	font-style: italic;
+	font-size: 20px;
+}

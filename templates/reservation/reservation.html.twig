@@ -1,0 +1,42 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Réservation de votre espace chez Rue du Boulot Coworking à Paris{% endblock %}
+
+{% block content %}
+
+<section id="reservation">
+    <div class="container">
+        
+        <div class="heading">
+			<h1 class="d-flex justify-content-center fw-bold">Réservation</h1>
+        </div>
+            <div class="col-md-10 mb-5 hotel-reservation-form">
+                {{ form_start(formReservation) }}
+                    <div class="input-group justify-content-center">
+                        {{ form_row(formReservation.dateArrivee, {
+                            label : 'Date d\'arrivée'
+                        }) }}
+                    </div>
+                    <div class="input-group justify-content-center">
+                        {{ form_row(formReservation.dateDepart, {
+                            label : 'Date de départ'
+                        }) }}
+                    </div>
+                    <div class="input-group justify-content-center">
+                        {{ form_row(formReservation.nbPersonnes, {
+                            label : 'Nombre de personnes'
+                        }) }}
+                    </div>
+                    <div class="input-group justify-content-center text-light">
+                        {{ form_row(formReservation.space, {
+                            label : 'Espaces'
+                        }) }}
+                    </div>
+                    <div class="input-group justify-content-center">
+                        {{ form_row(formReservation.envoyer) }}
+                    </div>
+                {{ form_end(formReservation) }} 
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Formulaire de contact : Rue du Boulot Coworking à Paris{% endblock %}
+
+{% block content %}
+
+<section id="contact">
+    <div class="img-responsive" style="background-image: url('images/front2.jpg')";>
+        <div class="container">
+            <div class="heading">
+                <h1 class="d-flex justify-content-center fw-bold">Contact</h1>
+            </div>
+        
+            <div class="row justify-content-center align-items-center">                 
+                <div class="col-lg-10 col-lg-offset-1">
+                    {{ form_start(contactForm) }}
+                    <div class="row" id="contact-form">
+                        <div class="col-md-6">
+                            {{ form_row(contactForm.prenom, {
+                                label: 'Prénom'
+                            }) }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ form_row(contactForm.nom) }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ form_row(contactForm.email) }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ form_row(contactForm.telephone, {
+                                label: 'Téléphone'
+                            }) }}
+                        </div>
+                        <div class="col-md-12">
+                            {{ form_row(contactForm.message) }}
+                        </div>
+                        <p class="blue col-md-12"><strong>* Ces informations sont requises.</strong></p>
+                        <div class="col-md-12 d-flex justify-content-center">
+                            {{ form_row(contactForm.envoyer) }}
+                        </div>
+                    {{ form_end(contactForm) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>      
+
+{% endblock %}
